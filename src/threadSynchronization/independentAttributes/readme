@@ -1,0 +1,15 @@
+Synchronization is built around an internal entity known as the intrinsic(פנימי) lock or monitor lock or just "monitor".
+Every object has an intrinsic lock associated with it.
+
+https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html
+
+When you use the synchronized keyword to protect a block of code, you must pass an
+object reference as a parameter. 
+Synchronized statements must specify the object that provides the intrinsic lock.
+
+Normally, you will use the this keyword to reference the
+object that executes the method, but you can use other object references. Normally, these
+objects will be created exclusively with this purpose. For example, if you have two independent
+attributes in a class shared by multiple threads, you must synchronize the access to each
+variable, but there is no problem if there is one thread accessing one of the attributes and
+another thread accessing the other at the same time.

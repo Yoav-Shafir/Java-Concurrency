@@ -1,0 +1,9 @@
+simple example of the synchronized mechanism.
+2 threads trying to access 2 different methods on the same object declared with the synchronized keyword.
+one method is static method of the SharedData class 
+and the other method is an instance method of the SharedData class.
+
+expected result: 
+Only one execution thread will access one of the static
+methods declared with the synchronized keyword, but another thread can access other nonstatic
+methods of an object of that class.

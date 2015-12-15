@@ -1,0 +1,9 @@
+- A Java program ends when all its threads finish (more specifically, when all its non-daemon
+threads finish.
+
+- If the initial thread (the one that executes the main() method) ends, the rest
+of the threads will continue with their execution until they finish.
+
+- If one of the threads use the
+System.exit() instruction to end the execution of the program, all the threads end
+their execution.

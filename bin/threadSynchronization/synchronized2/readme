@@ -1,0 +1,5 @@
+simple example of the synchronized mechanism.
+2 threads trying to access 2 different methods on the same object declared with the synchronized keyword.
+
+expected result: 
+Java only allows the execution of one of the critical sections of an object.

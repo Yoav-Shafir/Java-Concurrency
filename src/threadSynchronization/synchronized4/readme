@@ -1,0 +1,7 @@
+simple example of the synchronized mechanism.
+using recursive calls with synchronized methods.
+
+expected result: 
+As the thread has access to
+the synchronized methods of an object, you can call other synchronized methods
+of that object, including the method that is executing.

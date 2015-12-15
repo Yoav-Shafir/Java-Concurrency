@@ -1,0 +1,9 @@
+use case of 2 threads that invoke the same synchronized method and
+immediately call the wait() method inside that synchronized method - wait() tells the calling thread to give up the monitor and go to sleep until some other 
+thread enters the same monitor and calls notify().
+
+then we have a another thread which wakes the threads by calling the notifyAll() method.
+which thread will be resumed first? and how will it be executed.
+
+expected result:
+only one thread at a time will be executed until it exits the synchronized method or go again to wait state.

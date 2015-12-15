@@ -1,0 +1,23 @@
+https://computing.llnl.gov/tutorials/pthreads
+
+busy-waiting 
+In software engineering, busy-waiting or spinning is a technique in which a process repeatedly checks to see if a 
+condition is true, such as whether keyboard input or a lock is available. Spinning can also be used to generate an 
+arbitrary time delay, a technique that was necessary on systems that lacked a method of waiting a specific length of time.
+
+Guarded suspension
+In concurrent programming, guarded suspension[1] is a software design pattern for managing operations that require both a lock to be 
+acquired and a precondition to be satisfied before the operation can be executed. The guarded suspension pattern is 
+typically applied to method calls in object-oriented programs, and involves suspending the method call, and the calling thread, 
+until the precondition (acting as a guard) is satisfied.
+
+// https://computing.llnl.gov/tutorials/pthreads/#Mutexes
+Mutex ->  "mutual exclusion"
+Mutex variables are one of the primary means of implementing thread synchronization and for protecting shared data when multiple writes occur.
+A mutex variable acts like a "lock" protecting access to a shared data resource. The basic concept of a mutex as used in Pthreads is that only one thread can lock (or own) a mutex variable at any given time. Thus, even if several threads try to lock a mutex only one thread will be successful. No other thread can own that mutex until the owning thread unlocks that mutex. Threads must "take turns" accessing protected data.
+
+Very often https://computing.llnl.gov/tutorials/pthreads/#ConsitionVariablese action performed by a thread owning a mutex is the updating of global variables. This is a safe way to ensure that when several threads update the same variable, the final value is the same as what it would be if only one thread performed the update. The variables being updated belong to a "critical section".
+
+critical section. 
+A critical section is a block of code that accesses a shared resource and can't be executed by more than one
+thread at the same time.
